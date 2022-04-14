@@ -12,6 +12,6 @@ end
 figure(1)
 subplot(3,1,1);  plot(t,p,'Color', [0.9290 0.6940 0.1250],'LineWidth',2);  grid
 subplot(3,1,2);  plot(t,v,'Color', [0 0.4470 0.7410], 'LineWidth',2);  grid
-subplot(3,1,3);  plot(t,a,'r', 'LineWidth',2) 
+subplot(3,1,3);  plot(t,a,'r', 'LineWidth',2); grid
 
 

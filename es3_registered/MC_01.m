@@ -1,6 +1,6 @@
 % funzione per il motion curve MC01
 
-function [acc, vel, pos] = MC_01(alpha) %alpha is the master angle
+function [a, v, p] = MC_01(alpha) %alpha is the master angle
 % parameters
 h = 0.3;  % rise for the motio curve mc_01
 a1 = 80;  % angles in which the moton curve change behaviour
