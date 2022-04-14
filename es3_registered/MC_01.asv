@@ -1,0 +1,17 @@
+% funzione per il motion curve MC01
+
+function [acc, vel, pos] = MC_01(alpha) %alpha is the master angle
+% parameters
+h = 0.3;  % rise for the motio curve mc_01
+a1 = 80;  % angles in which the moton curve change behaviour
+a2 = 360; %
+in = [0 a1 a2];  % hermes suggests to create this vector which contains the time 
+                 % or angle instants in which my motion curve changes
+                 % behaviour
+if (alpha >= in(1)  && alpha < in(2))  % rise phase
+    da = in(2) - in(1);   % calculate the range of my interval
+    alpha_ad = (alpha-in(1))/da;  % adimensional value of alpha (I have to feed a function 
+                    % ) 
+
+end
+
