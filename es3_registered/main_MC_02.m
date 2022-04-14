@@ -1,11 +1,11 @@
 clear all;  close all;  clc;
 
-%% motion curve 01
+%% motion curve 02   cycloidal
 
 i=1;
 
 for x = 0:0.1:360
-    [a(i), v(i), p(i)] = MC_01(x);  % <----- function
+    [a(i), v(i), p(i)] = MC_02(x);  % <-------- function
     t(i) = x; % degrees
     i = i+1;
 end
