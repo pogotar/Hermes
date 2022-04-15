@@ -1,15 +1,10 @@
 %% Asymmetric trapezoidal speed profile (s-shape)
 %    see slides
 
-function [outputArg1,outputArg2] = MCM_sshape(alpha,par)
+function [a, v, p] = MCM_sshape(alpha,alpha_par)
 
-alpha_v = par.v;   % time instants in wich the acceleration changes
-alpha_w = par.w;   % i extract them from par
-
-if (alpha_v < 0 || alpha_v > alpha_w || alpha_w < 0 || alpha_w < 1)  % safe check
-    return
-end
-
+alpha_v = alpha_par.v;   % time instants in wich the acceleration changes
+alpha_w = alpha_par.w;   % i extract them from par
 
 % in dimensionless version h=1,   alpha_s = 1
 A = 2/(alpha_v*(1-alpha_v+alpha_w));      % max value of positive acceleration
@@ -27,7 +22,7 @@ elseif(alpha > alpha_v && alpha < alpha_w) % zero constant acceleration
 else
     a = -B;
     v = A*alpha_v-B*(alpha-alpha_w);
-    p = A*alpha_v*(alpha-alpha_v/2)-B/2*(alpha-alpha_w)^2
+    p = A*alpha_v*(alpha-alpha_v/2)-B/2*(alpha-alpha_w)^2;
 
 end
 
